@@ -1,478 +1,386 @@
-Skip to content
-Index.html
-Repository navigation
-Code
-Issues
-Pull requests
-Index.html
-/README.md
-blurealer
-blurealer
-25 minutes ago
-850 lines (705 loc) · 18.3 KB
-
-Preview
-
-Code
-
-Blame
-<title>EbonyStream</title> <style> * { box-sizing: border-box; } body { margin: 0; background: #fff8d6; color: #222; font-family: Arial, Helvetica, sans-serif; } header { background: #f4c430; padding: 18px 24px; border-bottom: 1px solid #d4a900; } .logo { font-size: 25px; font-weight: 800; color: #3b2a00; } main { width: min(1000px, 94%); margin: 25px auto 40px; } .ad-block { width: 100%; margin: 18px 0; padding: 17px; background: #fffdf0; border: 1px solid #eadb9b; border-radius: 10px; text-align: center; } .ad-label { margin-bottom: 10px; color: #8b792f; font-size: 10px; letter-spacing: 2px; } .ad-button { display: inline-block; padding: 11px 25px; background: #d4a900; color: white; text-decoration: none; border-radius: 7px; font-weight: bold; } .ad-button:hover { background: #b88f00; } .player { width: 100%; aspect-ratio: 16 / 9; background: #000; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 35px rgba(120, 90, 0, .25); } .player iframe, .player video { width: 100%; height: 100%; display: block; border: 0; background: #000; } .controls { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 15px; } button { border: 0; border-radius: 8px; padding: 12px 22px; background: #d4a900; color: white; font-size: 15px; font-weight: bold; cursor: pointer; } button:hover { background: #b88f00; } button:disabled { opacity: .4; cursor: not-allowed; } #counter { color: #6b5b20; font-weight: bold; } .comments-section { margin-top: 25px; padding: 20px; background: #fffdf0; border: 1px solid #eadb9b; border-radius: 10px; } .comments-section h2 { margin-top: 0; color: #3b2a00; } .site-footer { margin-top: 30px; padding: 22px; text-align: center; color: #6b5b20; border-top: 1px solid #eadb9b; } @media (max-width: 600px) { main { width: 94%; margin-top: 18px; } .controls { display: grid; grid-template-columns: 1fr 1fr; } #counter { grid-column: 1 / -1; grid-row: 1; text-align: center; } button { width: 100%; } } </style>
-EbonyStream
-ADVERTISEMENT
-discover more
-← Previous Video 0 of 0 Next →
-Comments
-<script async defer src="https://cusdis.com/js/cusdis.es.js"></script> © 2026 EbonyStream <script> const videos = [ { title: "Video 1", type: "iframe", url: "https://streamtape.com/e/23GZ61lYwdTZXp3/Lorigirls" }, { title: "Video 2", type: "iframe", url: "https://streamtape.com/e/3DV6zYWyk7FdvD6/Lorigirls02" }, { title: "Video 3", type: "iframe", url: "https://streamtape.com/e/o9d0aXOarZcj69/1000032307.mp4" }, { title: "Video 4", type: "iframe", url: "https://streamtape.com/e/w7kjRlGXOQUJ99v/1000032308.mp4" }, { title: "Video 5", type: "iframe", url: "https://streamtape.com/e/bZ6QZyMA2DFxDz/Lori_girls_o3" }, { title: "Video 6", type: "iframe", url: "https://streamtape.com/e/BaVQ6y02wbsy19K/Lorigirls04" }, { title: "Video 7", type: "iframe", url: "https://streamtape.com/e/Bqgo6d2YMkcydMO/Lorigirls05" }, { title: "Video 8", type: "iframe", url: "https://streamtape.com/e/lwBMblBLMbTZ3J/Lorigirls06" }, { title: "Video 9", type: "iframe", url: "https://streamtape.com/e/BY4Q6GLGkeCyBVY/Lorigirls07" }, { title: "Video 10", type: "iframe", url: "https://streamtape.com/e/bVAeWALZOXUPpKb/Lorigirls08" }, { title: "Video 11", type: "iframe", url: "https://streamtape.com/e/Lv82AdZAKKHR09J/Lorigirls10" }, { title: "Video 12", type: "iframe", url: "https://streamtape.com/e/Y6MdO1y2OahOGW/1000032362.mp4" }, { title: "Video 13", type: "iframe", url: "https://streamtape.com/e/LpPYyMpRJetb8q/1000032507.mp4" }, { title: "Video 14", type: "iframe", url: "https://streamtape.com/e/AqgPd08orAcbbp/lorigirls.mp4" }, { title: "Video 15", type: "iframe", url: "https://streamtape.com/e/RDRRPZbxJgtdP8R/6.28.mp4" }, { title: "Video 16", type: "iframe", url: "https://streamtape.com/e/1R4Yw9v8weCJpp/7.58.mp4" }, { title: "Video 17", type: "iframe", url: "https://streamtape.com/e/VYmy3J71ygUKRjx/lorigirls.mp4" }, { title: "Video 18", type: "iframe", url: "https://streamtape.com/e/kL66ZDLBGpCOqdL/lorigirls_.mp4" }, { title: "Video 19", type: "iframe", url: "https://streamtape.com/e/JDMLODVowbs9Mo/lorigirls2.mp4" }, { title: "Video 20", type: "iframe", url: "https://streamtape.com/e/Kq0vBxRq6pH0MRj/lorigirs3.mp4" }, { title: "Video 21", type: "iframe", url: "https://streamtape.com/e/ykLLboRPOzC1GOw/YouCut_20260814_101035665.mp4" } ]; let currentIndex = 0; const player = document.getElementById("player"); const counter = document.getElementById("counter"); const previousBtn = document.getElementById("previousBtn"); const nextBtn = document.getElementById("nextBtn"); function loadVideo(index) { if (!videos.length) { player.innerHTML = '
-No videos added
-'; counter.textContent = "No videos added"; previousBtn.disabled = true; nextBtn.disabled = true; return; } currentIndex = index; const selected = videos[currentIndex]; player.innerHTML = ""; if (selected.type === "iframe") { const iframe = document.createElement("iframe"); iframe.src = selected.url; iframe.allow = "autoplay; fullscreen; picture-in-picture"; iframe.allowFullscreen = true; iframe.setAttribute("scrolling", "no"); iframe.setAttribute("frameborder", "0"); iframe.referrerPolicy = "strict-origin-when-cross-origin"; player.appendChild(iframe); } else if (selected.type === "video") { const video = document.createElement("video"); video.src = selected.url; video.controls = true; video.playsInline = true; video.preload = "metadata"; player.appendChild(video); } counter.textContent = `Video ${currentIndex + 1} of ${videos.length}`; previousBtn.disabled = currentIndex === 0; nextBtn.disabled = currentIndex === videos.length - 1; } function nextVideo() { if (currentIndex < videos.length - 1) { loadVideo(currentIndex + 1); window.scrollTo({ top: 0, behavior: "smooth" }); } } function previousVideo() { if (currentIndex > 0) { loadVideo(currentIndex - 1); window.scrollTo({ top: 0, behavior: "smooth" }); } } document.addEventListener("keydown", function(event) { if (event.key === "ArrowRight") nextVideo(); if (event.key === "ArrowLeft") previousVideo(); }); loadVideo(0); </script> /streamtape.com/e/elXKgemZGOFYzeg/playgirls.mp4" },
-{
-  title: "Video 45",
-  type: "iframe",
-  url: "https://streamtape.com/e/o6rgo7WrdJUJBPm/playgirls.mp4"
-},
-
-{
-  title: "Video 46",
-  type: "iframe",
-  url: "https://streamtape.com/e/a2WPmyrPLyUM7e/yanch.mp4"
-},
-
-{
-  title: "Video 47",
-  type: "iframe",
-  url: "https://streamtape.com/e/QPDZblR1g3S0X9Z/t.booty_risky.mp4"
-},
-
-{
-  title: "Video 48",
-  type: "iframe",
-  url: "https://streamtape.com/e/a2jlBrjbdoUQ3Q/beautiful_breast.mp4"
-},
-
-{
-  title: "Video 49",
-  type: "iframe",
-  url: "https://streamtape.com/e/dj2DQQYl9rTkpKL/videocall.mp4"
-},
-
-{
-  title: "Video 50",
-  type: "iframe",
-  url: "https://streamtape.com/e/AljaGozaXWsDWD/emris_1.49.mp4"
-},
-
-{
-  title: "Video 51",
-  type: "iframe",
-  url: "https://streamtape.com/e/D0BVGadX4vfwv3/emris_and_beautiful_slim_baby.mp4"
-},
-
-{
-  title: "Video 52",
-  type: "iframe",
-  url: "https://streamtape.com/e/l7mr29ZyeWh77e8/emris_and_albino_baby.mp4"
-},
-
-{
-  title: "Video 53",
-  type: "iframe",
-  url: "https://streamtape.com/e/M73140x62VtmO4o/emris_and_b.mp4"
-},
-
-{
-  title: "Video 54",
-  type: "iframe",
-  url: "https://streamtape.com/e/a7YgbPwOQGtM4v/nice_L_girls.mp4"
-},
-
-{
-  title: "Video 55",
-  type: "iframe",
-  url: "https://streamtape.com/e/XlZy3QQ1D7tP4m/beautiful_back_ride.mp4"
-},
-
-{
-  title: "Video 56",
-  type: "iframe",
-  url: "https://streamtape.com/e/4PD8a4w4krcKaqg/beautiful_baby_.mp4"
-},
-
-{
-  title: "Video 57",
-  type: "iframe",
-  url: "https://streamtape.com/e/zrQdXeJ9ZyuYad8/sllimbaddie.mp4"
-},
-
-{
-  title: "Video 58",
-  type: "iframe",
-  url: "https://streamtape.com/e/RWeodgW9r8Udy2M/Lorigirls_66"
-},
-
-{
-  title: "Video 59",
-  type: "iframe",
-  url: "https://streamtape.com/e/9pMgObbz8QSYLv/Lorigirls_65"
-},
-
-{
-  title: "Video 60",
-  type: "iframe",
-  url: "https://streamtape.com/e/BGW7xLjymlsy1Rl/sllimbaddie.mp4"
-},
-
-{
-  title: "Video 61",
-  type: "iframe",
-  url: "https://streamtape.com/e/orYBqr7XgJUJ88q/Lorigirls_64"
-},
-
-{
-  title: "Video 62",
-  type: "iframe",
-  url: "https://streamtape.com/e/ykWzd3rpq6I19zV/Lorigirls"
-},
-
-{
-  title: "Video 63",
-  type: "iframe",
-  url: "https://streamtape.com/e/eYmAXAoeayf969/backshort.mp4"
-},
-
-{
-  title: "Video 64",
-  type: "iframe",
-  url: "https://streamtape.com/e/KX9oj8eqKxt0mYJ/forgotten_her_name_.mp4"
-},
-
-{
-  title: "Video 65",
-  type: "iframe",
-  url: "https://streamtape.com/e/wxQa16r9ZAcJ9Kx/part_2.mp4"
-},
-
-{
-  title: "Video 66",
-  type: "iframe",
-  url: "https://streamtape.com/e/m9dxYVRXdzIdR3/Lorigirls"
-},
-
-{
-  title: "Video 67",
-  type: "iframe",
-  url: "https://streamtape.com/e/rdvQpOBZazIxOo/video_.mp4"
-},
-
-{
-  title: "Video 68",
-  type: "iframe",
-  url: "https://streamtape.com/e/3xjbMjqx3kc6VX/slim_girl_video_2.mp4"
-},
-
-{
-  title: "Video 69",
-  type: "iframe",
-  url: "https://streamtape.com/e/xv336X1XlPCQAQ/YouCut_20260807_225148804.mp4"
-},
-
-{
-  title: "Video 70",
-  type: "iframe",
-  url: "https://streamtape.com/e/9WWgXOlYXMh1me/YouCut_20260807_232927219.mp4"
-},
-
-{
-  title: "Video 71",
-  type: "iframe",
-  url: "https://streamtape.com/e/oxvXKp9B9lTJ881/YouCut_20260808_000336159.mp4"
-},
-
-{
-  title: "Video 72",
-  type: "iframe",
-  url: "https://streamtape.com/e/ygJoOB0JJYt1V3G/video360p%2810%29.mp4"
-},
-
-{
-  title: "Video 73",
-  type: "iframe",
-  url: "https://streamtape.com/e/aPb8wzAQlqsxqKL/YouCut_20260808_001636663.mp4"
-},
-
-{
-  title: "Video 74",
-  type: "iframe",
-  url: "https://streamtape.com/e/egyKeVQ4WmtYlz2/YouCut_20260808_013930693.mp4"
-},
-
-{
-  title: "Video 75",
-  type: "iframe",
-  url: "https://streamtape.com/e/ayxdDBLoLYHxYoe/YouCut_20260808_014818119.mp4"
-},
-
-{
-  title: "Video 76",
-  type: "iframe",
-  url: "https://streamtape.com/e/O26pjvdGYdFZBy4/YouCut_20260809_120448527.mp4"
-},
-
-{
-  title: "Video 77",
-  type: "iframe",
-  url: "https://streamtape.com/e/pbeGRw0Ag8CrmqD/YouCut_20260809_120915791.mp4"
-},
-
-{
-  title: "Video 78",
-  type: "iframe",
-  url: "https://streamtape.com/e/A0oOj3wmPasXM0O/YouCut_20260809_121146120.mp4"
-},
-
-{
-  title: "Video 79",
-  type: "iframe",
-  url: "https://streamtape.com/e/90lZxo6K9jFyp6/YouCut_20260809_124744405.mp4"
-},
-
-{
-  title: "Video 80",
-  type: "iframe",
-  url: "https://streamtape.com/e/lr2gdOd07zT7Q13/YouCut_20260809_125359342.mp4"
-},
-
-{
-  title: "Video 81",
-  type: "iframe",
-  url: "https://streamtape.com/e/2qlm3ODj92IKZl/YouCut_20260809_121447956.mp4"
-},
-
-{
-  title: "Video 82",
-  type: "iframe",
-  url: "https://streamtape.com/e/4qDBqoWW7jTK09Z/YouCut_20260811_091751889.mp4"
-},
-
-{
-  title: "Video 83",
-  type: "iframe",
-  url: "https://streamtape.com/e/RpW0ox6z1ws0D8/YouCut_20260813_071616797.mp4"
-},
-
-{
-  title: "Video 84",
-  type: "iframe",
-  url: "https://streamtape.com/e/rlymyAGAqoieMp/YouCut_20260813_070441142.mp4"
-},
-
-{
-  title: "Video 85",
-  type: "iframe",
-  url: "https://streamtape.com/e/vDlezLxR2mT4eDk/YouCut_20260813_062242856.mp4"
-},
-
-{
-  title: "Video 86",
-  type: "iframe",
-  url: "https://streamtape.com/e/0ZOjxwyAmlibG2k/YouCut_20260813_070441142.mp4"
-},
-
-{
-  title: "Video 87",
-  type: "iframe",
-  url: "https://streamtape.com/e/41ZL7xVkpQUKQP9/YouCut_20260813_070909865.mp4"
-},
-
-{
-  title: "Video 88",
-  type: "iframe",
-  url: "https://streamtape.com/e/26v8XLAp3juZO73/YouCut_20260813_072705123.mp4"
-},
-
-{
-  title: "Video 89",
-  type: "iframe",
-  url: "https://streamtape.com/e/QWrZPxJwKac0Ov8/YouCut_20260813_072216478.mp4"
-},
-
-{
-  title: "Video 90",
-  type: "iframe",
-  url: "https://streamtape.com/e/9O7x22MorgcZVw/YouCut_20260813_071616797.mp4"
-},
-
-{
-  title: "Video 91",
-  type: "iframe",
-  url: "https://streamtape.com/e/4RM4qvzMXeiKeGg/YouCut_20260813_072705123.mp4"
-},
-
-{
-  title: "Video 92",
-  type: "iframe",
-  url: "https://streamtape.com/e/ZqO4Ld4g6oHq2KW/YouCut_20260814_092009825.mp4"
-},
-
-{
-  title: "Video 93",
-  type: "iframe",
-  url: "https://streamtape.com/e/q3P9VyJXBVsz3pw/YouCut_20260814_092328691.mp4"
-},
-
-{
-  title: "Video 94",
-  type: "iframe",
-  url: "https://streamtape.com/e/J9K1qe1XMxIj8x3/YouCut_20260814_091637520.mp4"
-},
-
-{
-  title: "Video 95",
-  type: "iframe",
-  url: "https://streamtape.com/e/dVMAAKpQBZtZDg/YouCut_20260814_094204060.mp4"
-},
-
-{
-  title: "Video 96",
-  type: "iframe",
-  url: "https://streamtape.com/e/7PMQMaQWz7uRKO/YouCut_20260814_092813471.mp4"
-},
-
-{
-  title: "Video 97",
-  type: "iframe",
-  url: "https://streamtape.com/e/dORAGgw2K7fk82A/YouCut_20260814_093441694.mp4"
-},
-
-{
-  title: "Video 98",
-  type: "iframe",
-  url: "https://streamtape.com/e/VoDpwQRd64IyqZ/YouCut_20260814_094523289.mp4"
-},
-
-{
-  title: "Video 99",
-  type: "iframe",
-  url: "https://streamtape.com/e/9BxYJoQkeBTDaP/YouCut_20260814_095933602.mp4"
-},
-
-{
-  title: "Video 100",
-  type: "iframe",
-  url: "https://streamtape.com/e/Y8mz2qQ2GyTvQjG/YouCut_20260814_101927079.mp4"
-},
-
-{
-  title: "Video 101",
-  type: "iframe",
-  url: "https://streamtape.com/e/Qa9OxYyBPLtwdP/YouCut_20260814_100351627.mp4"
-},
-
-{
-  title: "Video 102",
-  type: "iframe",
-  url: "https://streamtape.com/e/yl1K2kxkzZi1WGJ/YouCut_20260814_095217011.mp4"
-},
-
-{
-  title: "Video 103",
-  type: "iframe",
-  url: "https://streamtape.com/e/ykLLboRPOzC1GOw/YouCut_20260814_101035665.mp4"
-}
-];
-
-let currentIndex = 0;
-
-const player = document.getElementById("player");
-
-const counter = document.getElementById("counter");
-
-const previousBtn = document.getElementById("previousBtn");
-
-const nextBtn = document.getElementById("nextBtn");
-
-/*
-                 LOAD PLAYER
-======================================================== */
-
-function loadVideo(index) {
-
-if (!videos.length) {
-
-  player.innerHTML =
-    '<div style="color:white;text-align:center;padding-top:20%;font-size:18px;">No videos added</div>';
-
-  counter.textContent =
-    "No videos added";
-
-  previousBtn.disabled = true;
-  nextBtn.disabled = true;
-
-  return;
-}
-
-
-currentIndex = index;
-
-const selected =
-  videos[currentIndex];
-
-
-/*
-Clear previous player
-*/
-
-player.innerHTML = "";
-
-
-/*
-Streamtape / EMBED PLAYER
-*/
-
-if (selected.type === "iframe") {
-
-  const iframe =
-    document.createElement("iframe");
-
-  iframe.src =
-    selected.url;
-
-  iframe.allow =
-    "autoplay; fullscreen; picture-in-picture";
-
-  iframe.allowFullscreen =
-    true;
-
-  iframe.setAttribute(
-    "scrolling",
-    "no"
-  );
-
-  iframe.setAttribute(
-    "frameborder",
-    "0"
-  );
-
-  iframe.referrerPolicy =
-    "strict-origin-when-cross-origin";
-
-  player.appendChild(iframe);
-
-}
-
-
-/*
-DIRECT VIDEO
-*/
-
-else if (selected.type === "video") {
-
-  const video =
-    document.createElement("video");
-
-  video.src =
-    selected.url;
-
-  video.controls =
-    true;
-
-  video.playsInline =
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EbonyStream</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: #fff8d6;
+      color: #222;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    header {
+      background: #f4c430;
+      padding: 18px 24px;
+      border-bottom: 1px solid #d4a900;
+    }
+
+    .logo {
+      font-size: 25px;
+      font-weight: 800;
+      color: #3b2a00;
+    }
+
+    main {
+      width: min(1000px, 94%);
+      margin: 25px auto 40px;
+    }
+
+    .ad-block {
+      width: 100%;
+      margin: 18px 0;
+      padding: 17px;
+      background: #fffdf0;
+      border: 1px solid #eadb9b;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .ad-label {
+      margin-bottom: 10px;
+      color: #8b792f;
+      font-size: 10px;
+      letter-spacing: 2px;
+    }
+
+    .ad-button {
+      display: inline-block;
+      padding: 11px 25px;
+      background: #d4a900;
+      color: white;
+      text-decoration: none;
+      border-radius: 7px;
+      font-weight: bold;
+    }
+
+    .ad-button:hover {
+      background: #b88f00;
+    }
+
+    .player {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background: #000;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 10px 35px rgba(120, 90, 0, .25);
+    }
+
+    .player iframe,
+    .player video {
+      width: 100%;
+      height: 100%;
+      display: block;
+      border: 0;
+      background: #000;
+    }
+
+    .controls {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-top: 15px;
+    }
+
+    button {
+      border: 0;
+      border-radius: 8px;
+      padding: 12px 22px;
+      background: #d4a900;
+      color: white;
+      font-size: 15px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #b88f00;
+    }
+
+    button:disabled {
+      opacity: .4;
+      cursor: not-allowed;
+    }
+
+    #counter {
+      color: #6b5b20;
+      font-weight: bold;
+    }
+
+    .comments-section {
+      margin-top: 25px;
+      padding: 20px;
+      background: #fffdf0;
+      border: 1px solid #eadb9b;
+      border-radius: 10px;
+    }
+
+    .comments-section h2 {
+      margin-top: 0;
+      color: #3b2a00;
+    }
+
+    .site-footer {
+      margin-top: 30px;
+      padding: 22px;
+      text-align: center;
+      color: #6b5b20;
+      border-top: 1px solid #eadb9b;
+    }
+
+    @media (max-width: 600px) {
+      main {
+        width: 94%;
+        margin-top: 18px;
+      }
+
+      .controls {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+
+      #counter {
+        grid-column: 1 / -1;
+        grid-row: 1;
+        text-align: center;
+      }
+
+      button {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">EbonyStream</div>
+</header>
+
+<main>
+
+  <div class="ad-block">
+    <div class="ad-label">ADVERTISEMENT</div>
+    <a
+      class="ad-button"
+      href="https://criminaldissolved.com/vcpi7ixsk?key=dc9812ab5bdb7f3c8c7ee473969bcaed"
+      target="_blank"
+      rel="noopener noreferrer">
+      discover more
+    </a>
+  </div>
+
+  <div class="player" id="player"></div>
+
+  <div class="controls">
+    <button id="previousBtn" onclick="previousVideo()">← Previous</button>
+    <span id="counter">Video 0 of 0</span>
+    <button id="nextBtn" onclick="nextVideo()">Next →</button>
+  </div>
+
+  <section class="comments-section">
+    <h2>Comments</h2>
+    <div
+      id="cusdis_thread"
+      data-host="https://cusdis.com"
+      data-app-id="31d558ee-cedc-4124-be9f-b1f2c56c40ea"
+      data-page-id="page-1"
+      data-page-url="https://example.com"
+      data-page-title="EbonyStream">
+    </div>
+  </section>
+
+  <script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
+
+  <footer class="site-footer">
+    © 2026 EbonyStream
+  </footer>
+
+</main>
+
+<script>
+  const videos = [
+    {
+      title: "Video 1",
+      type: "iframe",
+      url: "https://streamtape.com/e/23GZ61lYwdTZXp3/Lorigirls"
+    },
+    {
+      title: "Video 2",
+      type: "iframe",
+      url: "https://streamtape.com/e/3DV6zYWyk7FdvD6/Lorigirls02"
+    },
+    {
+      title: "Video 3",
+      type: "iframe",
+      url: "https://streamtape.com/e/o9d0aXOarZcj69/1000032307.mp4"
+    },
+    {
+      title: "Video 4",
+      type: "iframe",
+      url: "https://streamtape.com/e/w7kjRlGXOQUJ99v/1000032308.mp4"
+    },
+    {
+      title: "Video 5",
+      type: "iframe",
+      url: "https://streamtape.com/e/bZ6QZyMA2DFxDz/Lori_girls_o3"
+    },
+    {
+      title: "Video 6",
+      type: "iframe",
+      url: "https://streamtape.com/e/BaVQ6y02wbsy19K/Lorigirls04"
+    },
+    {
+      title: "Video 7",
+      type: "iframe",
+      url: "https://streamtape.com/e/Bqgo6d2YMkcydMO/Lorigirls05"
+    },
+    {
+      title: "Video 8",
+      type: "iframe",
+      url: "https://streamtape.com/e/lwBMblBLMbTZ3J/Lorigirls06"
+    },
+    {
+      title: "Video 9",
+      type: "iframe",
+      url: "https://streamtape.com/e/BY4Q6GLGkeCyBVY/Lorigirls07"
+    },
+    {
+      title: "Video 10",
+      type: "iframe",
+      url: "https://streamtape.com/e/bVAeWALZOXUPpKb/Lorigirls08"
+    },
+    {
+      title: "Video 11",
+      type: "iframe",
+      url: "https://streamtape.com/e/Lv82AdZAKKHR09J/Lorigirls10"
+    },
+    {
+      title: "Video 12",
+      type: "iframe",
+      url: "https://streamtape.com/e/Y6MdO1y2OahOGW/1000032362.mp4"
+    },
+    {
+      title: "Video 13",
+      type: "iframe",
+      url: "https://streamtape.com/e/LpPYyMpRJetb8q/1000032507.mp4"
+    },
+    {
+      title: "Video 14",
+      type: "iframe",
+      url: "https://streamtape.com/e/AqgPd08orAcbbp/lorigirls.mp4"
+    },
+    {
+      title: "Video 15",
+      type: "iframe",
+      url: "https://streamtape.com/e/RDRRPZbxJgtdP8R/6.28.mp4"
+    },
+    {
+      title: "Video 16",
+      type: "iframe",
+      url: "https://streamtape.com/e/1R4Yw9v8weCJpp/7.58.mp4"
+    },
+    {
+      title: "Video 17",
+      type: "iframe",
+      url: "https://streamtape.com/e/VYmy3J71ygUKRjx/lorigirls.mp4"
+    },
+    {
+      title: "Video 18",
+      type: "iframe",
+      url: "https://streamtape.com/e/kL66ZDLBGpCOqdL/lorigirls_.mp4"
+    },
+    {
+      title: "Video 19",
+      type: "iframe",
+      url: "https://streamtape.com/e/JDMLODVowbs9Mo/lorigirls2.mp4"
+    },
+    {
+      title: "Video 20",
+      type: "iframe",
+      url: "https://streamtape.com/e/Kq0vBxRq6pH0MRj/lorigirs3.mp4"
+    },
+    {
+      title: "Video 21",
+      type: "iframe",
+      url: "https://streamtape.com/e/ykLLboRPOzC1GOw/YouCut_20260814_101035665.mp4"
+    }
+  ];
+
+  let currentIndex = 0;
+
+  const player = document.getElementById("player");
+  const counter = document.getElementById("counter");
+  const previousBtn = document.getElementById("previousBtn");
+  const nextBtn = document.getElementById("nextBtn");
+
+  function loadVideo(index) {
+    if (!videos.length) {
+      player.innerHTML = '<div style="color:white;text-align:center;padding-top:20%;font-size:18px;">No videos added</div>';
+      counter.textContent = "No videos added";
+      previousBtn.disabled = true;
+      nextBtn.disabled = true;
+      return;
+    }
+
+    currentIndex = index;
+    const selected = videos[currentIndex];
+    player.innerHTML = "";
+
+    if (selected.type === "iframe") {
+      const iframe = document.createElement("iframe");
+      iframe.src = selected.url;
+      iframe.allow = "autoplay; fullscreen; picture-in-picture";
+      iframe.allowFullscreen = true;
+      iframe.setAttribute("scrolling", "no");
+      iframe.setAttribute("frameborder", "0");
+      iframe.referrerPolicy = "strict-origin-when-cross-origin";
+      player.appendChild(iframe);
+    } else if (selected.type === "video") {
+      const video = document.createElement("video");
+      video.src = selected.url;
+      video.controls = true;
+      video.playsInline = true;
+      video.preload = "metadata";
+      player.appendChild(video);
+    }
+
+    counter.textContent = `Video ${currentIndex + 1} of ${videos.length}`;
+    previousBtn.disabled = currentIndex === 0;
+    nextBtn.disabled = currentIndex === videos.length - 1;
+  }
+
+  function nextVideo() {
+    if (currentIndex < videos.length - 1) {
+      loadVideo(currentIndex + 1);
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  }
+
+  function previousVideo() {
+    if (currentIndex > 0) {
+      loadVideo(currentIndex - 1);
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  }
+
+  document.addEventListener("keydown", function(event) {
+    if (event.key === "ArrowRight") nextVideo();
+    if (event.key === "ArrowLeft") previousVideo();
+  });
+
+  loadVideo(0);
+</script>
+
+</body>
+</html>
